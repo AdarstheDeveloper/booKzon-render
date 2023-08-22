@@ -45,7 +45,7 @@ RUN npm run build
 FROM backend as final
 
 # Copy the built frontend files from the frontend stage to the final stage
-COPY --from=frontend /frontend/dist /frontend/dist
+COPY --from=frontend /frontend/build /frontend/build
 
 # Change the working directory back to the backend directory
 WORKDIR /
